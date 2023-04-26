@@ -47,18 +47,9 @@ void Ball::updateBall(double &delta){
         VecFuncs::normalize(Dir);
         pos.y -= 1;
     }
-
-    //std::cout << "X: " << pos.x << " | Y: " << pos.y << std::endl; 
 }
 
-void Ball::renderBall(){ // DST FUCKED UP MY RENDERING
-    /*SDL_Rect dst; // OLD FUCKED DST
-
-    dst.x = getPos().x - ballRect.w * getScale().x / 2;
-    dst.y = getPos().y - ballRect.h * getScale().y / 2;
-    dst.w = ballRect.w * getScale().x;
-    dst.y = ballRect.h * getScale().y;*/
-
+void Ball::renderBall(){
     SDL_Rect dst;
 
     dst.x = getPos().x - ballRect.w * getScale().x / 2;
